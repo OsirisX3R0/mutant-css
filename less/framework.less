@@ -1,0 +1,81 @@
+// out: ../css/framework.css, sourcemap: false, compress: false
+
+// Initial Containers
+.container, .item {
+    margin:auto;
+    display: grid;
+}
+
+// Loop calls
+.generate-columns(12);
+
+.gap(50);
+
+.col-gap(50);
+
+.row-gap(50);
+
+// Columns
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+  .cols-@{i} {
+    grid-template-columns: repeat(@i, 100% / @i);
+  }
+  .generate-columns(@n, (@i + 1));
+}
+
+// Grid Gap
+.gap(@n, @i: 5, @p: 1) when (@i =< @n) {
+    .gap-@{i} {
+        grid-gap: (5px * @p);
+    }
+    .gap(@n, (@i + 5), (@p + 1));
+};
+.col-gap(@n, @i: 5, @p: 1) when (@i =< @n) {
+    .col-gap-@{i} {
+        grid-column-gap: (5px * @p);
+    }
+    .col-gap(@n, (@i + 5), (@p + 1));
+};
+.row-gap(@n, @i: 5, @p: 1) when (@i =< @n) {
+    .row-gap-@{i} {
+        grid-row-gap: (5px * @p);
+    }
+    .row-gap(@n, (@i + 5), (@p + 1));
+};
+
+// Alignment
+.jc-start { justify-content: start; }
+.jc-end { justify-content: end; }
+.jc-center { justify-content: center; }
+.jc-stretch { justify-content: stretch; }
+.jc-around { justify-content: space-around;; }
+.jc-between { justify-content: space-between;; }
+.jc-even { justify-content: space-evenly; }
+
+.ac-start { align-content: start; }
+.ac-end { align-content: end; }
+.ac-center { align-content: center; }
+.ac-stretch { align-content: stretch; }
+.ac-around { align-content: space-around;; }
+.ac-between { align-content: space-between;; }
+.ac-even { align-content: space-evenly; }
+
+.ji-start { justify-items: start; }
+.ji-end { justify-items: end; }
+.ji-center { justify-items: center; }
+.ji-stretch { justify-items: stretch; }
+
+.ai-start { align-items: start; }
+.ai-end { align-items: end; }
+.ai-center { align-items: center; }
+.ai-stretch { align-items: stretch; }
+
+.js-start { justify-self: start; }
+.js-end { justify-self: end; }
+.js-center { justify-self: center; }
+.js-stretch { justify-self: stretch; }
+
+.as-start { align-self: start; }
+.as-end { align-self: end; }
+.as-center { align-self: center; }
+.as-stretch { align-self: stretch; }
