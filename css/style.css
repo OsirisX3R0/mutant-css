@@ -1,14 +1,13 @@
 body {
   background-color: darkslategrey;
+  font-family: sans-serif;
+  color: #b8b8d9;
 }
 .container {
   background-color: darkcyan;
-  width: 560px;
   border-radius: 5px;
-  padding: 15px;
 }
 .item {
   background-color: blueviolet;
   border-radius: 5px;
-  padding: 15px;
 }

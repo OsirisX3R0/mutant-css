@@ -1,43 +1,59 @@
 .container,
-.item {
+.grid {
+  width: 100%;
   margin: auto;
+}
+.item,
+.grid {
   display: grid;
 }
 .cols-1 {
-  grid-template-columns: repeat(1, 100%);
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 15px;
 }
 .cols-2 {
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 15px;
 }
 .cols-3 {
-  grid-template-columns: repeat(3, 33.33333333%);
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 15px;
 }
 .cols-4 {
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 15px;
 }
 .cols-5 {
-  grid-template-columns: repeat(5, 20%);
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 15px;
 }
 .cols-6 {
-  grid-template-columns: repeat(6, 16.66666667%);
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 15px;
 }
 .cols-7 {
-  grid-template-columns: repeat(7, 14.28571429%);
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 15px;
 }
 .cols-8 {
-  grid-template-columns: repeat(8, 12.5%);
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 15px;
 }
 .cols-9 {
-  grid-template-columns: repeat(9, 11.11111111%);
+  grid-template-columns: repeat(9, 1fr);
+  margin-bottom: 15px;
 }
 .cols-10 {
-  grid-template-columns: repeat(10, 10%);
+  grid-template-columns: repeat(10, 1fr);
+  margin-bottom: 15px;
 }
 .cols-11 {
-  grid-template-columns: repeat(11, 9.09090909%);
+  grid-template-columns: repeat(11, 1fr);
+  margin-bottom: 15px;
 }
 .cols-12 {
-  grid-template-columns: repeat(12, 8.33333333%);
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 15px;
 }
 .gap-5 {
   grid-gap: 5px;
