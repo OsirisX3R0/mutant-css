@@ -1,9 +1,17 @@
 // out: ../css/style.css, sourcemap: false, compress: false
 
+@light: darken(desaturate(ghostwhite, 70%), 20%);
+@red: darken(firebrick, 5%);
+@yellow: darken(bisque, 50%);
+@blue: darken(cornflowerblue, 10%);
+@green: darken(forestgreen, 10%);
+@cyan: darken(darkcyan, 10%);
+
 body {
     background-color: darkslategrey;
-    font-family: sans-serif;
-    color: darken(desaturate(ghostwhite, 70%), 20%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: @light;
 }
 
 .container {
@@ -12,12 +20,53 @@ body {
     padding: 1px 15px 15px;
 }
 
-h2 { text-decoration: underline; }
+h2 {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p {
+    border-bottom: 1px dashed @light;
+    padding-bottom: 3px;
+}
 
 .item {
     background-color: blueviolet;
     font-size:20px;
     font-weight: bold;
+    border: 2px solid rgba(65, 15, 112, 0.5);
     border-radius: 5px;
-    padding: 7px 0px;
+    padding: 7px 10px;
+    box-shadow: 1px 1px 1px @cyan;
+}
+
+code {
+    background-color: @cyan;
+    font-family: 'Inconsolata', monospace;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 3px;
+}
+
+.header,
+.grid-dense .col-span-2.row-span-2 {
+    background-color: @red;
+    border: 2px solid rgba(86, 16, 16, 0.5);
+}
+
+.sidebar {
+    background-color: @yellow;
+    border: 2px solid rgba(128, 68, 0, 0.5);
+}
+
+.content,
+.grid-dense .row-span-2 {
+    background-color: @blue;
+    border:2px solid rgba(18, 70, 161, 0.5);
+}
+
+.footer,
+.grid-dense .col-span-2 {
+    background-color: @green;
+    border:2px solid rgba(20, 82, 20, 0.5);
 }

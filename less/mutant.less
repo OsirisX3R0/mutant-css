@@ -6,10 +6,17 @@
     &:extend(.item);
 }
 
+.grid-dense {
+    &:extend(.grid);
+    grid-auto-flow: dense;
+}
+
 .item { display: grid; }
 
 // Loop calls
 .generate-columns(15);
+
+.generate-rows(5);
 
 .gap(50);
 
@@ -23,10 +30,22 @@
     grid-template-columns: repeat(@i, 1fr);
     margin-bottom:15px;
     }
-    .span-@{i} {
+    .col-span-@{i} {
       grid-column: span @i;
     }
     .generate-columns(@n, (@i + 1));
+}
+
+// Rows
+.generate-rows(@n, @i: 1) when (@i =< @n) {
+    .rows-@{i} {
+    grid-template-rows: repeat(@i, auto);
+    //margin-bottom:15px;
+    }
+    .row-span-@{i} {
+      grid-row: span @i;
+    }
+    .generate-rows(@n, (@i + 1));
 }
 
 // Grid Gap
