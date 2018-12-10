@@ -200,93 +200,93 @@
 .row-gap-50 {
   grid-row-gap: 50px;
 }
-.jc-start {
+.r-grid-start {
   justify-content: start;
 }
-.jc-end {
+.r-grid-end {
   justify-content: end;
 }
-.jc-center {
+.r-grid-center {
   justify-content: center;
 }
-.jc-stretch {
+.r-grid-stretch {
   justify-content: stretch;
 }
-.jc-around {
+.r-grid-around {
   justify-content: space-around;
 }
-.jc-between {
+.r-grid-between {
   justify-content: space-between;
 }
-.jc-even {
+.r-grid-even {
   justify-content: space-evenly;
 }
-.ac-start {
+.c-grid-start {
   align-content: start;
 }
-.ac-end {
+.c-grid-end {
   align-content: end;
 }
-.ac-center {
+.c-grid-center {
   align-content: center;
 }
-.ac-stretch {
+.c-grid-stretch {
   align-content: stretch;
 }
-.ac-around {
+.c-grid-around {
   align-content: space-around;
 }
-.ac-between {
+.c-grid-between {
   align-content: space-between;
 }
-.ac-even {
+.c-grid-even {
   align-content: space-evenly;
 }
-.ji-start {
+.r-items-start {
   justify-items: start;
 }
-.ji-end {
+.r-items-end {
   justify-items: end;
 }
-.ji-center {
+.r-items-center {
   justify-items: center;
 }
-.ji-stretch {
+.r-items-stretch {
   justify-items: stretch;
 }
-.ai-start {
+.c-items-start {
   align-items: start;
 }
-.ai-end {
+.c-items-end {
   align-items: end;
 }
-.ai-center {
+.c-items-center {
   align-items: center;
 }
-.ai-stretch {
+.c-items-stretch {
   align-items: stretch;
 }
-.js-start {
+.r-self-start {
   justify-self: start;
 }
-.js-end {
+.r-self-end {
   justify-self: end;
 }
-.js-center {
+.r-self-center {
   justify-self: center;
 }
-.js-stretch {
+.r-self-stretch {
   justify-self: stretch;
 }
-.as-start {
+.c-self-start {
   align-self: start;
 }
-.as-end {
+.c-self-end {
   align-self: end;
 }
-.as-center {
+.c-self-center {
   align-self: center;
 }
-.as-stretch {
+.c-self-stretch {
   align-self: stretch;
 }
