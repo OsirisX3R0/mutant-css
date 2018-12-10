@@ -6,27 +6,10 @@
     &:extend(.item);
 }
 
-.auto-grid(1);
-.auto-grid(2);
-.auto-grid(3);
-
-.auto-grid(@i) when (@i =< 3) {
-    @j: @i + 1;
-    .auto-grid-1x@{j} {
-        &:extend(.grid);
-        grid-template-columns: 1fr (1fr + @i);
-    }
-    .auto-grid-@{j}x1 {
-        &:extend(.grid);
-        grid-template-columns: (1fr + @i) 1fr;
-    }
-    .auto-grid(@i + 1)
-}
-
 .item { display: grid; }
 
 // Loop calls
-.generate-columns(12);
+.generate-columns(15);
 
 .gap(50);
 
@@ -34,15 +17,16 @@
 
 .row-gap(50);
 
-.offset-columns-x(1);
-
 // Columns
 .generate-columns(@n, @i: 1) when (@i =< @n) {
-  .cols-@{i} {
+    .cols-@{i} {
     grid-template-columns: repeat(@i, 1fr);
     margin-bottom:15px;
-  }
-  .generate-columns(@n, (@i + 1));
+    }
+    .span-@{i} {
+      grid-column: span @i;
+    }
+    .generate-columns(@n, (@i + 1));
 }
 
 // Grid Gap
@@ -63,20 +47,6 @@
         grid-row-gap: (5px * @p);
     }
     .row-gap(@n, (@i + 5), (@p + 1));
-}
-
-// Offset Grids
-@first: 1;
-.offset-columns-x(@first) when (@first =< 4) {
-    @second: 1;
-    .offset-columns-y(@second) when (@second =< 4) {
-        .offset-@{first}-@{second} {
-            grid-template-columns: (1fr - (@first - 1)) (1fr - (@second - 1));
-        }
-        .offset-columns-y(@second + 1);
-    }
-    @second: 1;
-    .offset-columns-x(@first + 1);
 }
 
 // Alignment
