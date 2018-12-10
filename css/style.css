@@ -2,6 +2,7 @@ body {
   background-color: darkslategrey;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  text-transform: lowercase;
   color: #b8b8d9;
 }
 .container {
@@ -16,6 +17,12 @@ h2 {
 p {
   border-bottom: 1px dashed #b8b8d9;
   padding-bottom: 3px;
+}
+a {
+  color: #b8b8d9;
+}
+a:hover {
+  text-decoration: none;
 }
 .item {
   background-color: blueviolet;
@@ -34,7 +41,8 @@ code {
   padding: 3px;
 }
 .header,
-.grid-dense .col-span-2.row-span-2 {
+.grid-dense .col-span-2.row-span-2,
+.dense .col-span-2.row-span-2 {
   background-color: #9d1e1e;
   border: 2px solid rgba(86, 16, 16, 0.5);
 }
@@ -43,12 +51,20 @@ code {
   border: 2px solid rgba(128, 68, 0, 0.5);
 }
 .content,
-.grid-dense .row-span-2 {
+.grid-dense .row-span-2,
+.dense .row-span-2 {
   background-color: #3676e8;
   border: 2px solid rgba(18, 70, 161, 0.5);
 }
 .footer,
-.grid-dense .col-span-2 {
+.grid-dense .col-span-2,
+.dense .col-span-2 {
   background-color: #186218;
   border: 2px solid rgba(20, 82, 20, 0.5);
+}
+.align {
+  width: 400px;
+  background-color: #005858;
+  border-radius: 3px;
+  padding: 7px 10px;
 }

@@ -11,6 +11,7 @@ body {
     background-color: darkslategrey;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    text-transform: lowercase;
     color: @light;
 }
 
@@ -28,6 +29,13 @@ h2 {
 p {
     border-bottom: 1px dashed @light;
     padding-bottom: 3px;
+}
+
+a {
+    color: @light;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .item {
@@ -49,7 +57,8 @@ code {
 }
 
 .header,
-.grid-dense .col-span-2.row-span-2 {
+.grid-dense .col-span-2.row-span-2,
+.dense .col-span-2.row-span-2 {
     background-color: @red;
     border: 2px solid rgba(86, 16, 16, 0.5);
 }
@@ -60,13 +69,22 @@ code {
 }
 
 .content,
-.grid-dense .row-span-2 {
+.grid-dense .row-span-2,
+.dense .row-span-2 {
     background-color: @blue;
     border:2px solid rgba(18, 70, 161, 0.5);
 }
 
 .footer,
-.grid-dense .col-span-2 {
+.grid-dense .col-span-2,
+.dense .col-span-2 {
     background-color: @green;
     border:2px solid rgba(20, 82, 20, 0.5);
+}
+
+.align {
+    width:400px;
+    background-color: @cyan;
+    border-radius: 3px;
+    padding: 7px 10px;
 }
