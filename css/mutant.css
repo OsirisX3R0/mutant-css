@@ -241,13 +241,13 @@
 .content-even-h {
   justify-content: space-evenly;
 }
-.content-top-v {
+.content-top {
   align-content: start;
 }
-.content-bottom-v {
+.content-bottom {
   align-content: end;
 }
-.content-middle-v {
+.content-middle {
   align-content: center;
 }
 .content-stretch-v {
