@@ -17,7 +17,11 @@
 // Loop calls
 .generate-columns(15);
 
+.column-start-end(16);
+
 .generate-rows(5);
+
+.row-start-end(6);
 
 .gap(50);
 
@@ -30,33 +34,47 @@
     .cols-@{i} {
         grid-template-columns: repeat(@i, 1fr);
     }
+    .cols-auto-@{i} {
+        grid-template-columns: repeat(@i, auto);
+    }
     .col-span-@{i} {
         grid-column: span @i;
     }
+    .generate-columns(@n, (@i + 1));
+}
+
+.column-start-end(@n, @i: 1) when (@i =< @n) {
     .col-start-@{i} {
         grid-column-start: @i
     }
     .col-end-@{i} {
         grid-column-end: @i
     }
-    .generate-columns(@n, (@i + 1));
+    .column-start-end(@n, (@i + 1));
 }
 
 // Rows
 .generate-rows(@n, @i: 1) when (@i =< @n) {
     .rows-@{i} {
+        grid-template-rows: repeat(@i, 1fr);
+    }
+    .rows-auto-@{i} {
         grid-template-rows: repeat(@i, auto);
     }
     .row-span-@{i} {
         grid-row: span @i;
     }
+    .generate-rows(@n, (@i + 1));
+}
+
+.row-start-end(@n, @i: 1) when (@i =< @n) {
     .row-start-@{i} {
         grid-row-start: @i
     }
     .row-end-@{i} {
         grid-row-end: @i
     }
-    .generate-rows(@n, (@i + 1));
+    .row-start-end(@n, (@i + 1));
 }
 
 // Grid Gap
@@ -78,6 +96,23 @@
     }
     .row-gap(@n, (@i + 5), (@p + 1));
 }
+
+// Auto-fit / Auto-fill
+.grid-fit {
+    grid-template-columns: repeat(auto-fit, 1fr);
+}
+
+.grid-fill {
+    grid-template-columns: repeat(auto-fill, 1fr);
+}
+
+// .row-fit {
+//     grid-template-rows: repeat(auto-fit, 1fr);
+// }
+//
+// .row-fill {
+//     grid-template-rows: repeat(auto-fill, 1fr);
+// }
 
 // Alignment
 .content-left { justify-content: start; }

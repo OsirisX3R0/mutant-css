@@ -42,7 +42,7 @@ code {
 }
 .header,
 .grid-dense .col-span-2.row-span-2,
-.dense .col-span-2.row-span-2 {
+.dense-styles .col-span-2.row-span-2 {
   background-color: #9d1e1e;
   border: 2px solid rgba(86, 16, 16, 0.5);
 }
@@ -52,13 +52,13 @@ code {
 }
 .content,
 .grid-dense .row-span-2,
-.dense .row-span-2 {
+.dense-styles .row-span-2 {
   background-color: #3676e8;
   border: 2px solid rgba(18, 70, 161, 0.5);
 }
 .footer,
 .grid-dense .col-span-2,
-.dense .col-span-2 {
+.dense-styles .col-span-2 {
   background-color: #186218;
   border: 2px solid rgba(20, 82, 20, 0.5);
 }
@@ -67,4 +67,7 @@ code {
   background-color: #005858;
   border-radius: 3px;
   padding: 7px 10px;
+}
+ul {
+  list-style-type: circle;
 }

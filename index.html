@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Mutant CSS</h1>
+        <h1>Mutant CSS | simple css grid framework</h1>
         <!-- <a href="demo.html">Demo</a> -->
 
         <h2>Even Columns</h2>
@@ -190,7 +190,7 @@
         <h2>Rows</h2>
         <p><code>row-span-#</code> will let you choose how many rows your
         cells span.</p>
-        <div class="grid cols-5 rows-4 gap-10">
+        <div class="grid cols-5 rows-auto-4 gap-10">
             <div class="item content-center col-span-5 header">this is a header</div>
             <div class="item content-center content-middle col-span-2 row-span-2 sidebar">sidebar</div>
             <div class="item content-center content-middle col-span-3 row-span-2 content">
@@ -229,7 +229,7 @@
         </div>
         <p>The same grid, but not in <code>grid-dense</code>. Elements continue
         to attempt to display in order.</p>
-        <div class="grid cols-8 gap-10 dense">
+        <div class="grid cols-8 gap-10 dense-styles">
             <div class="item content-center content-middle col-span-2 row-span-2">1</div>
             <div class="item content-center content-middle col-span-2">2</div>
             <div class="item content-center content-middle row-span-2">3</div>
@@ -252,6 +252,41 @@
             <div class="item content-center">20</div>
         </div>
 
+        <h2>Start/End</h2>
+        <p>mutant has classes for starting and ending on a particular row or
+        column. <code>col-start-#</code>, <code>col-end-#</code>,
+        <code>row-start-#</code> and <code>row-end-#</code> will
+        dictate this, no <code>-span-</code> needed.<br /><br />
+        Note: CSS Grid's tracks start <strong>before</strong> the first column
+        in your grid and end <strong>after</strong> the last. This 8-column grid
+        starts on track 1 and ends on track 9. Open up your developer tools
+        (Firefox Developer Edition has <strong>very</strong> comprehensive
+        grid tools) and take a look. The numbers are the order of the items,
+        then the starting - ending columns, then rows.</p>
+
+        <div class="grid cols-8 rows-5 gap-10">
+            <div class="item content-center content-middle col-start-3 col-end-5">1. 3 - 5</div>
+            <div class="item content-center content-middle col-start-1 col-end-3 row-start-1 row-end-3">2. 3 - 5</div>
+            <div class="item content-center content-middle col-end-9 row-end-6">3. end 6, 9</div>
+            <div class="item content-center content-middle col-start-4 col-end-7 row-start-2 row-end-5">4. 4 - 7, 2 - 5</div>
+            <div class="item content-center content-middle col-start-1 row-start-4 row-end-6">5. start 1, 4 - 6</div>
+            <div class="item content-center content-middle col-start-7 col-end-9 row-start-1 row-end-3">6. 7 - 9, 1 - 3</div>
+            <div class="item content-center content-middle col-start-3 col-end-5 row-start-2 row-end-4">7. 3 - 5, 2 - 4</div>
+            <div class="item content-center content-middle col-start-2 col-end-4 row-start-3 row-end-5">8. 2 - 4, 3 - 5</div>
+        </div>
+
+        <p>Oops. Forgot to mention, you can layer items this way. Well,
+        now you know.</p>
+
+        <h2>Auto-fit/Auto-fill</h2>
+        <p>You can also set your columns and rows to auto-fit or auto-fill:</p>
+        <ul>
+            <li><em>Auto-fit</em> fits the columns into the space, expanding them to
+            take up any available space in the grid.</li>
+            <li><em>Auto-fill</em> fills the row with as many columns as it can fit,
+            creating implicit columns when a new column can fit.</li>
+        </ul>
+        <p>Here, take a look.</p>
         <!-- <h2>Alignment</h2>
         <p>Grid alignments with <code>r-grid-</code> and <code>c-grid-</code>.</p>
         <div class="grid cols-5 gap-10 align">
